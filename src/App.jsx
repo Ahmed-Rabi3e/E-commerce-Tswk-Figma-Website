@@ -1,24 +1,27 @@
-import { useState } from "react"
-import { Button } from "./components/ui/button"
-import { Calendar } from "./components/ui/calendar"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainLayout from '@/layouts/MainLayout';
+import Home from '@/pages/Home/Home';
+import About from '@/pages/AboutUs';
+import Contact from '@/pages/Contact';
+import Products from '@/pages/Products';
 
-function App() {
-  const [date, setDate] = useState(new Date())
-
+const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline my-10">
-        Hello world!
-      </h1>
-      <Calendar
-        mode="single"
-        selected={date}
-        onSelect={setDate}
-        className="rounded-md border"
-      />
-      <Button>Click me</Button>
-    </>
-  )
-}
+    <BrowserRouter
+      future={{
+        v7_relativeSplatPath: true,
+        v7_startTransition: true,
+      }}>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
