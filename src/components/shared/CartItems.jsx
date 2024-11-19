@@ -10,6 +10,7 @@ const CartItem = () => {
                     <img
                         src={category_3}
                         alt="Product"
+                        loading="lazy"
                         className="w-24 h-24 object-cover bg-gray-200 rounded-xl"
                     />
                     {/* Text Details */}
