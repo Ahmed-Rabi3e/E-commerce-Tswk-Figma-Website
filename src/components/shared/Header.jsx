@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { TfiMenuAlt, TfiClose } from "react-icons/tfi";
 import Cart from "@/components/shared/Cart";
+import { logo } from '@/assets/index'
 
 
 const Header = () => {
@@ -27,7 +28,7 @@ const Header = () => {
                         {isMobileMenuOpen ? <TfiClose size={25} /> : <TfiMenuAlt size={25} />}
                     </button>
                     <img
-                        src="src/assets/logo.png"
+                        src={logo}
                         alt="Logo"
                         loading="lazy"
                         className="w-10 h-10"

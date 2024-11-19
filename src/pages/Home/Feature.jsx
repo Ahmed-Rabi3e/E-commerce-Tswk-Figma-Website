@@ -1,27 +1,29 @@
+import { feature_1, feature_2, feature_3, feature_4 } from "@/assets/index";
+
 const features = [
     {
         id: 1,
         title: "توصيل مجاني",
         description: "طلبات حتى 1500ج",
-        icon: "src/assets/feature-1.png",
+        icon: feature_1,
     },
     {
         id: 2,
         title: "عروض وخصومات",
         description: "عروض وخصومات دائمة",
-        icon: "src/assets/feature-2.png",
+        icon: feature_2,
     },
     {
         id: 3,
         title: "الدفع عند الاستلام",
         description: "ميزة الدفع عند الاستلام",
-        icon: "src/assets/feature-3.png",
+        icon: feature_3,
     },
     {
         id: 4,
         title: "خدمة العملاء",
         description: "متوفرة 24/7",
-        icon: "src/assets/feature-4.png",
+        icon: feature_4,
     },
 ];
 

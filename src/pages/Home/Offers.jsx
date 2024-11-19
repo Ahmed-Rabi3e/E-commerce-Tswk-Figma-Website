@@ -1,6 +1,7 @@
 import Heading from "@/components/shared/Heading";
 import { Link } from "react-router-dom";
 import { GoArrowUpLeft } from "react-icons/go";
+import { offer_1, offer_2, offer_3, offer_4 } from '@/assets/index'
 
 const offers = [
     {
@@ -8,28 +9,28 @@ const offers = [
         title: "هواتف ذكية",
         discount: "خصم يصل حتى 30%",
         buttonText: "أطلب الآن",
-        image: "src/assets/privite-offer-1.png",
+        image: offer_1,
     },
     {
         id: 2,
         title: "شاشات ذكية",
         discount: "خصم يصل حتى 70%",
         buttonText: "أطلب الآن",
-        image: "src/assets/privite-offer-2.png",
+        image: offer_2,
     },
     {
         id: 3,
         title: "آيباد & تابلت",
         discount: "خصم يصل حتى 20%",
         buttonText: "أطلب الآن",
-        image: "src/assets/privite-offer-3.png",
+        image: offer_3,
     },
     {
         id: 4,
         title: "سماعات وايرلس",
         discount: "خصم يصل حتى 50%",
         buttonText: "أطلب الآن",
-        image: "src/assets/privite-offer-4.png",
+        image: offer_4,
     },
 ];
 

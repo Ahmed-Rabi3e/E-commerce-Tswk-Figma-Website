@@ -1,13 +1,16 @@
 import Heading from "@/components/shared/Heading";
+import {
+    category_1, category_3, category_2, category_4, category_5, category_6, category_7
+} from '@/assets/index'
 
 const categories = [
-    { id: 1, image: "src/assets/sec-1.png", label: "لابتوب" },
-    { id: 2, image: "src/assets/sec-2.png", label: "ايباد" },
-    { id: 3, image: "src/assets/sec-3.png", label: "ايفون" },
-    { id: 4, image: "src/assets/sec-4.png", label: "سماعات" },
-    { id: 5, image: "src/assets/sec-5.png", label: "كاميرا" },
-    { id: 6, image: "src/assets/sec-6.png", label: "ايربودز" },
-    { id: 7, image: "src/assets/product-2.png", label: "ساعة" },
+    { id: 2, image: category_1, label: "لابتوب" },
+    { id: 1, image: category_2, label: "ايباد" },
+    { id: 3, image: category_3, label: "ايفون" },
+    { id: 4, image: category_4, label: "سماعات" },
+    { id: 5, image: category_5, label: "كاميرا" },
+    { id: 6, image: category_6, label: "ايربودز" },
+    { id: 7, image: category_7, label: "ساعة" },
 ];
 
 const Categories = () => {
