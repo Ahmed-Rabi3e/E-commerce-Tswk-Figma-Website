@@ -9,6 +9,10 @@ body {
   /* font-family: "", sans-serif; Add an Arabic-friendly font */
 }
 
+[data-state="open"] > button {
+  display: none;
+}
+
 .scrollbar-hide {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
