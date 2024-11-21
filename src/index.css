@@ -8,6 +8,18 @@ html {
 body {
   /* font-family: "", sans-serif; Add an Arabic-friendly font */
 }
+@font-face {
+  font-family: "DIN Next LT W23";
+  src: url("/fonts/din-next-lt-w23-bold.ttf") format("truetype"); /* Path to the font file */
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "DIN Next LT W23 MEDIUM";
+  src: url("/fonts/din-next-lt-w23-medium.ttf") format("truetype"); /* Path to the font file */
+  font-weight: normal;
+  font-style: normal;
+}
 
 [data-state="open"] > button {
   display: none;
