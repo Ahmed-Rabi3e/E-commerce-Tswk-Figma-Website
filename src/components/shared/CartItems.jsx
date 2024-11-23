@@ -15,7 +15,7 @@ const CartItem = () => {
                     />
                     {/* Text Details */}
                     <div className="flex flex-col relative">
-                        <p className="text-sm font-semibold text-sec">
+                        <p className="text-sm font-semibold text-sec mb-5">
                             آيفون 15 برو ماكس، سعة 256 جيجابايت، تيتانيوم طبيعي
                         </p>
                         <div className="flex flex-col text-left text-gray-500 absolute top-1/2 -translate-y-1/2 left-0">

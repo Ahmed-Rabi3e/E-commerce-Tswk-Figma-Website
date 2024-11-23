@@ -14,7 +14,7 @@ const QuantityControl = ({ hasDelete }) => {
     };
 
     return (
-        <div className="flex items-center gap-2 mt-6">
+        <div className="flex items-center gap-2">
             <div className="flex items-center border border-gray-300 rounded-3xl overflow-hidden w-fit">
                 <button
                     onClick={handleIncrease}
