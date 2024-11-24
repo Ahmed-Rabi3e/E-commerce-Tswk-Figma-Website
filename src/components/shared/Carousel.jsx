@@ -100,7 +100,7 @@ const Carousel = ({ head, hasCount }) => {
     };
 
     return (
-        <section className="bg-white py-8">
+        <section className="bg-white py-8 transition-all duration-300">
             <div className="container mx-auto px-4">
                 <Heading label={head} hasCount={hasCount}>
                     <div className="flex items-center gap-2">

@@ -10,7 +10,7 @@ const CustomRadioButtons = ({ label, options }) => {
     return (
         <div className="my-2">
             <h1 className="mb-2 text-lg text-text_gray">{label}</h1>
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-wrap">
                 {options.map((option, index) => (
                     <label key={index} className="relative cursor-pointer">
                         {/* Hidden Radio Input */}

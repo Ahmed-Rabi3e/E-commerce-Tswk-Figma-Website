@@ -26,6 +26,10 @@ import offer_2 from "/src/assets/privite-offer-2.png"
 import offer_3 from "/src/assets/privite-offer-3.png"
 import offer_4 from "/src/assets/privite-offer-4.png"
 
+import rating from "/src/assets/rating.png"
+
+import user from "/src/assets/user.webp"
+
 
 
 export {
@@ -34,5 +38,5 @@ export {
     product_1, product_2, product_3, product_4, product_5,
     category_1, category_2, category_3, category_4, category_5, category_6, category_7,
     offer_1, offer_2, offer_3, offer_4,
-    pro_1
+    pro_1, rating, user
 }  

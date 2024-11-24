@@ -5,18 +5,16 @@
 html {
   direction: rtl; /* Change to ltr for English */
 }
-body {
-  /* font-family: "", sans-serif; Add an Arabic-friendly font */
-}
+
 @font-face {
   font-family: "DIN Next LT W23";
-  src: url("/fonts/din-next-lt-w23-bold.ttf") format("truetype"); /* Path to the font file */
-  font-weight: bold;
-  font-style: bold;
+  src: url("/fonts/DIN Next LT W23 Regular-29d5cc9399fee3fea467ed7bcb64db8591092806574f0c4c583b57c48bfccaf6.ttf") format("truetype"); 
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "DIN Next LT W23 MEDIUM";
-  src: url("/fonts/din-next-lt-w23-medium.ttf") format("truetype"); /* Path to the font file */
+  src: url("/fonts/din-next-lt-w23-medium.ttf") format("truetype"); 
   font-weight: normal;
   font-style: normal;
 }
