@@ -1,7 +1,7 @@
 import { category_3 } from "@/assets/index";
 import QuantityControl from "./QuelityButton";
 
-const CartItem = () => {
+const CartItem = ({hasDelete}) => {
     return (
         <div className="w-full p-4 border-b border-t border-gray-200">
             {/* Item Details */}
@@ -25,7 +25,7 @@ const CartItem = () => {
                             <span className="line-through text-sm">7000ج</span>
                         </div>
                         <div>
-                            <QuantityControl hasDelete={true} />
+                            <QuantityControl hasDelete={hasDelete} />
                         </div>
                     </div>
                 </div>

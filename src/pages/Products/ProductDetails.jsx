@@ -159,6 +159,7 @@ const ProductDetails = () => {
                         <VirticalRadio
                             label="المساحة:"
                             hiddenRadio={false}
+                            hasOffer={true}
                             options={["منتج واحد فقط", "اشتري 2 و احصل على خصم 10٪", "اشتري 3 و احصل على خصم 15٪"]}
                         />
                         <div className="flex items-center justify-between px-4 pt-6">

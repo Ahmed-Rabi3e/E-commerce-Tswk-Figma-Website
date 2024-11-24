@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { MdOutlinePayments } from "react-icons/md";
 
-const VirticalRadio = ({ label, options }) => {
+const VirticalRadio = ({ label, options, hasOffer, hasIcon }) => {
     const [selectedValue, setSelectedValue] = useState("");
 
     const handleChange = (value) => {
@@ -14,7 +15,7 @@ const VirticalRadio = ({ label, options }) => {
                 {options.map((option, index) => (
                     <label key={index} className="relative cursor-pointer">
                         {/* Add Discount Label for the Second Option */}
-                        {index === 1 && (
+                        {hasOffer && index === 1 && (
                             <span className="absolute top-0 right-10 -translate-y-1/2 bg-main text-white text-xs px-2 py-1 rounded-xl">
                                 العرض الأفضل
                             </span>
@@ -32,15 +33,17 @@ const VirticalRadio = ({ label, options }) => {
 
                         {/* Border */}
                         <div
-                            className={`w-full h-14 flex items-center justify-between text-xl sm:text-lg rounded-lg border-2 px-4 ${selectedValue === option
-                                ? "border-main bg-main bg-opacity-10 text-main"
+                            className={`w-full h-14 flex items-center justify-between text-sm sm:text-lg rounded-lg border-2 px-4 ${selectedValue === option
+                                ? "border-main bg-main bg-opacity-10 text-main font-semibold"
                                 : "border-gray-300 text-sec"
                                 }`}
                         >
                             <span className="mr-8">{option}</span>
-                            <div className="flex flex-col">
-                                <span className="mr-8 text-lg font-semibold">6000ج</span>
-                                <span className="mr-8 text-sm">7000ج</span>
+                            <div >
+                                {hasIcon ? <MdOutlinePayments size={30} /> : <div className="flex flex-col">
+                                    <span className="mr-8 text-lg font-semibold">6000ج</span>
+                                    <span className="mr-8 text-sm">7000ج</span>
+                                </div>}
                             </div>
                         </div>
                     </label>

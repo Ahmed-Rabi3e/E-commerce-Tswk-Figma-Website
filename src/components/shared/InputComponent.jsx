@@ -1,18 +1,18 @@
 
 const InputWithIcon = ({
-  label, // Label for the input
-  placeholder = "Enter text", // Placeholder for the input
-  icon: Icon, // Icon component to render conditionally
-  iconPosition = "left", // Position of the icon: "left" or "right"
-  showIcon = false, // Whether to show the icon or not
-  type = "text", // Input type: "text", "password", etc.
+  label, 
+  placeholder = "Enter text", 
+  icon: Icon, 
+  iconPosition = "left",
+  showIcon = false, 
+  type = "text", // Input type: "text", "password".
   value,
   onChange,
 }) => {
   return (
     <div className="w-full my-4">
       {/* Label */}
-      {label && <label className="block text-sm font-medium mb-1">{label}</label>}
+      {label && <label className="block text-sm font-normal mb-1">{label}</label>}
       
       <div className="relative">
         {/* Icon (conditionally rendered) */}

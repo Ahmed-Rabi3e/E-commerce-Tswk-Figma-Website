@@ -30,7 +30,7 @@ const Cart = () => {
                         </button>
                     </div>
                     <SheetDescription className="mt-4">
-                        <CartItem />
+                        <CartItem hasDelete={true}/>
                         {/* Total Price & Actions */}
                         <div className="mt-4">
                             <div className="flex flex-col sm:flex-row items-center sm:justify-between pt-4">
