@@ -73,7 +73,7 @@ const Checkout = () => {
                 </div>
 
                 {/* Order Summary */}
-                <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="bg-white py-6 px-8 rounded-lg shadow-md">
                     <h2 className="text-2xl font-bold mb-4">ملخص الطلب</h2>
                     <CartItem />
 

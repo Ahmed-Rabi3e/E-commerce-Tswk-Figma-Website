@@ -8,8 +8,8 @@ export default {
 	theme: {
     	extend: {
     		fontFamily: {
-    			din: ['DIN Next LT W23"', "sans-serif"],
-    			din_medium: ['DIN Next LT W23 MEDIUM"', "sans-serif"]
+    			din: ['DIN Next LT W23', "sans-serif"],
+    			din_medium: ['DIN Next LT W23 MEDIUM', "sans-serif"]
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
