@@ -15,7 +15,7 @@ import { HiStar } from "react-icons/hi";
 import { IoCallOutline } from "react-icons/io5";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { MdOutlinePayments, MdOutlineHeadsetMic } from "react-icons/md";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { RiArrowGoBackFill } from "react-icons/ri";
 
 const mockProducts = [
@@ -168,7 +168,7 @@ const ProductDetails = () => {
                             </p>
                             <p className="text-base md:text-lg font-bold text-gray-800">6500ج</p>
                         </div>
-                        <button className="w-full py-3 text-2xl rounded-3xl my-6 text-white bg-main px-6 flex justify-center items-center">اشتري الان - الدفع عند الاستلام</button>
+                        <Link to='/checkout' className="w-full py-3 text-2xl rounded-3xl my-6 text-white bg-main px-6 flex justify-center items-center">اشتري الان - الدفع عند الاستلام</Link>
 
                         <div className="p-4">
                             <h3 className="text-xl font-semibold">تفاصيل عن المنتج:</h3>

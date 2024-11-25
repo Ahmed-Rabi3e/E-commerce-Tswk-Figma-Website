@@ -1,6 +1,5 @@
 import InputWithIcon from "@/components/shared/InputComponent";
 import { useState } from "react";
-import { FaCheck } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa6";
 import { TbInfoOctagon } from "react-icons/tb";
@@ -80,7 +79,7 @@ const Checkout = () => {
 
                     {/* Discount Code */}
                     <div className="mt-4">
-                        {!isValidCode ? (
+                        {!isValidCode && (
                             <div className="flex items-center justify-between my-5 p-3 bg-red-100">
                                 <div className="flex gap-2 items-center">
                                     <TbInfoOctagon className="text-red-500 text-xl" />
@@ -90,16 +89,7 @@ const Checkout = () => {
                                     <MdClose className="text-sec text-xl" />
                                 </div>
                             </div>
-                        ) : (
-                            <div className="flex items-center justify-between my-5 p-3 bg-green-100">
-                                <div className="flex gap-2 items-center">
-                                    <FaCheck className="text-green-500 text-xl" />
-                                    <p className="text-sec text-xl">كود الخصم غير صالح.</p>
-                                </div>
-                                <div>
-                                    <MdClose className="text-sec text-xl" />
-                                </div>
-                            </div>)}
+                        )}
 
                         <div className="flex gap-2 relative">
                             <input

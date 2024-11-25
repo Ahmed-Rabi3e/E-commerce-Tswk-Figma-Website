@@ -30,6 +30,8 @@ import rating from "/src/assets/rating.png"
 
 import user from "/src/assets/user.webp"
 
+import succuss from "/src/assets/succuss.webp"
+import faild from "/src/assets/failed.webp"
 
 
 export {
@@ -38,5 +40,5 @@ export {
     product_1, product_2, product_3, product_4, product_5,
     category_1, category_2, category_3, category_4, category_5, category_6, category_7,
     offer_1, offer_2, offer_3, offer_4,
-    pro_1, rating, user
+    pro_1, rating, user, succuss, faild
 }  

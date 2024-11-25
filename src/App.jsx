@@ -7,7 +7,8 @@ import Products from '@/pages/Products/Products';
 import ProductDetails from '@/pages/Products/ProductDetails';
 import Checkout from './pages/Products/Checkout';
 import SecondLayout from './layouts/SecondLayout';
-import PaymentSuccuss from './pages/Payment/PaymentSuccuss';
+import PaymentSuccess from './pages/Payment/PaymentSuccuss';
+import PaymentFaild from './pages/Payment/PaymentFaild';
 
 const App = () => {
   return (
@@ -21,12 +22,13 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="products" element={<Products />} />
           <Route path="products/:productId" element={<ProductDetails />} />
-          <Route path="paymentsuccuss" element={<PaymentSuccuss />} />
+          <Route path="paymentsuccuss" element={<PaymentSuccess />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Route>
         <Route path="/checkout" element={<SecondLayout />}>
           <Route index element={<Checkout />} />
+          <Route path="/checkout/paymentfaild" element={<PaymentFaild />} />
         </Route>
       </Routes>
     </BrowserRouter>
