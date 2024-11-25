@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from '@/layouts/MainLayout';
 import Home from '@/pages/Home/Home';
-import About from '@/pages/AboutUs';
-import Contact from '@/pages/Contact';
+import About from '@/pages/About/AboutUs';
+import Contact from '@/pages/Contact/Contact';
 import Products from '@/pages/Products/Products';
 import ProductDetails from '@/pages/Products/ProductDetails';
 import Checkout from './pages/Products/Checkout';

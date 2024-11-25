@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
-const FilterSidebar = ({ setSearchParams }) => {
+const FilterSidebar = ({ setSearchParams, mobile }) => {
     const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
 
     const handleCategoryChange = (e) => {
@@ -24,7 +24,7 @@ const FilterSidebar = ({ setSearchParams }) => {
     };
 
     return (
-        <div className="w-[293px] h-fit flex flex-col self-center md:self-start p-4 border bg-white rounded-2xl shadow-md">
+        <div className={`w-[293px] h-fit flex flex-col p-4 border bg-white rounded-2xl shadow-md ${mobile ? "hidden" : "block"}`}>
             {/* Categories */}
             <h3 className="text-lg font-semibold mb-4">الأقسام</h3>
             <div className="space-y-2 border-b pb-4">

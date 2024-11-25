@@ -5,6 +5,7 @@ import FilterSidebar from "@/pages/Products/FilterSidebar";
 import NavigationBar from "@/components/shared/NavigationBar";
 import { pro_1, category_3, product_1 } from "@/assets/index";
 import Pagination from "@/components/shared/Pagination";
+import { DrawerDemo } from "@/components/shared/Drawer";
 
 const mockProducts = [
     {
@@ -21,8 +22,7 @@ const mockProducts = [
         name: "سامسونج الترا جالاكسي. شريحتان اتصال بلون بنفسجي تيتانيوم.",
         category: "mobiles",
         price: 2000,
-        image:
-            category_3,
+        image: category_3,
         originalPrice: "7000ج",
         rating: "4.2/5",
     },
@@ -49,8 +49,7 @@ const mockProducts = [
         name: "سامسونج الترا جالاكسي. شريحتان اتصال بلون بنفسجي تيتانيوم.",
         category: "mobiles",
         price: 2000,
-        image:
-            category_3,
+        image: category_3,
         originalPrice: "7000ج",
         rating: "4.2/5",
     },
@@ -88,11 +87,12 @@ const Products = () => {
         <>
             <NavigationBar />
             <div className="flex flex-col sm:flex-row md:flex-row my-4">
-                <FilterSidebar setSearchParams={setSearchParams} />
+                <FilterSidebar setSearchParams={setSearchParams} mobile={true} />
                 <div className="flex flex-col flex-wrap w-full p-4">
                     <div className="flex items-center justify-between mb-4">
                         <h1 className="text-2xl">قائمة المنتجات <span className="text-sm text-text_gray">(230)</span></h1>
-                        <h3><span className="text-sm ml-1 text-text_gray">ترتيب حسب </span><select name="" id="" className="text-sm text-text_gray border rounded-md px-2 py-1"> <option value="">الاعلي تقييماً</option></select></h3>
+                        <h3 className="hidden lg:block"><span className="text-sm ml-1 text-text_gray">ترتيب حسب </span><select name="" id="" className="text-sm text-text_gray border rounded-md px-2 py-1"> <option value="">الاعلي تقييماً</option></select></h3>
+                        <DrawerDemo setSearchParams={setSearchParams} />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
                         {filteredProducts.length ? (

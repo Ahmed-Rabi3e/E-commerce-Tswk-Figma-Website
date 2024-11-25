@@ -10,6 +10,7 @@ const PaymentSuccess = () => {
         <img
           src={succuss}
           alt="Order Success"
+          loading="lazy"
           className="w-48 mx-auto mb-2"
         />
         <h1 className="text-2xl sm:text-3xl font-bold text-sec">

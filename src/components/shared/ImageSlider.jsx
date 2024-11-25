@@ -45,6 +45,7 @@ const ImageSlider = ({ images }) => {
                         <SwiperSlide key={index}>
                             <img
                                 src={image}
+                                loading="lazy"
                                 alt={`Slide ${index + 1}`}
                                 className="rounded-lg w-96 h-fit mx-auto"
                             />
@@ -69,6 +70,7 @@ const ImageSlider = ({ images }) => {
                         <SwiperSlide key={index}>
                             <img
                                 src={image}
+                                loading="lazy"
                                 alt={`Thumbnail ${index + 1}`}
                                 className="cursor-pointer rounded-lg border-2 border-transparent hover:border-main"
                             />

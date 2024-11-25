@@ -14,7 +14,7 @@ const Hero = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center justify-between">
                 {/* Text Content */}
                 <div className="w-full lg:w-[35%] text-center lg:text-right z-50">
-                    <p className="text-main font-medium text-sm lg:text-base mb-3 flex items-center">
+                    <p className="text-main font-medium text-sm lg:text-base mb-3 flex items-center justify-center lg:justify-start">
                         <span className="text-main px-3 py-1 font-bold flex items-center gap-2">
                             <span className="bg-main rounded-full p-1"><FaStar className="fill-third" size={10} /></span>
                             من أفضل منتجات هذا الشهر

@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
             className="relative border rounded-lg p-4 flex flex-col cursor-pointer shadow-lg"
             to={`/products/${product.id}`}
         >
-            <img src={product.image} alt={product.name} className="w-60 h-44 object-contain mb-4 mx-auto" />
+            <img src={product.image} loading="lazy" alt={product.name} className="w-60 h-44 object-contain mb-4 mx-auto" />
             <h2 className="font-semibold text-lg">{product.name}</h2>
             <div className="text-red-500 flex items-center justify-between">
                 <div>
