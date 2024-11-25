@@ -24,7 +24,7 @@ const FilterSidebar = ({ setSearchParams, mobile }) => {
     };
 
     return (
-        <div className={`w-[293px] h-fit flex flex-col p-4 border bg-white rounded-2xl shadow-md ${mobile ? "hidden" : "block"}`}>
+        <div className={`w-[293px] h-fit p-4 border bg-white rounded-2xl shadow-md ${mobile ? "hidden lg:block" : "flex flex-col"}`}>
             {/* Categories */}
             <h3 className="text-lg font-semibold mb-4">الأقسام</h3>
             <div className="space-y-2 border-b pb-4">
