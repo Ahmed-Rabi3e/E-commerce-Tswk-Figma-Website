@@ -17,7 +17,6 @@ import { RiArrowGoBackFill } from "react-icons/ri";
 import { Link, useParams } from "react-router-dom";
 import CustomRadioButtons from "./CustomRadio";
 import Testmoniails from "./Testmoniails";
-import VirticalRadio from "./VirticalRadio";
 
 const mockProducts = [
     {

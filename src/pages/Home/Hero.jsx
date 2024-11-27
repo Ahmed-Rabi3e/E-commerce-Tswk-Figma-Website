@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import { hero } from "@/assets/index";
+import HomeSlider from "@/components/shared/HomeSlider";
 const Hero = () => {
     return (
         <section className="relative bg-third py-16 lg:py-28 overflow-hidden w-full h-[717px] flex rounded-lg">
@@ -34,12 +34,7 @@ const Hero = () => {
 
                 {/* Product Image */}
                 <div className="w-full lg:w-[65%] flex justify-start z-50">
-                    <img
-                        loading="lazy"
-                        src={hero}
-                        alt="Gaming Headphones"
-                        className="w-[500px] lg:w-[785px] xl:w-[900px] object-contain"
-                    />
+                    <HomeSlider />
                 </div>
             </div>
         </section>
