@@ -6,6 +6,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: './',
+  build: {
+    rollupOptions: {
+      input: '/index.html',
+    },
+  },
+  server: {
+    historyApiFallback: true,
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
