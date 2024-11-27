@@ -167,7 +167,7 @@ const Checkout = () => {
                         </div>
                     </div>
 
-                    <Link to='/paymentsuccuss' className="w-full py-4 flex justify-center bg-main text-white rounded-3xl text-2xl mt-6">
+                    <Link to='/checkout/paymentsuccess' className="w-full py-4 flex justify-center bg-main text-white rounded-3xl text-2xl mt-6">
                         تأكيد الطلب
                     </Link>
                     <Features />
