@@ -9,6 +9,7 @@ import Checkout from './pages/Products/Checkout';
 import SecondLayout from './layouts/SecondLayout';
 import PaymentSuccess from './pages/Payment/PaymentSuccuss';
 import PaymentFaild from './pages/Payment/PaymentFaild';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
@@ -29,6 +30,9 @@ const App = () => {
         <Route path="/checkout" element={<SecondLayout />}>
           <Route index element={<Checkout />} />
           <Route path="/checkout/paymentfaild" element={<PaymentFaild />} />
+        </Route>
+        <Route path="/" element={<SecondLayout />}>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
