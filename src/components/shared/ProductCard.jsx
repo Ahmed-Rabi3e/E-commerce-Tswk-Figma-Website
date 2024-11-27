@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
     return (
         <Link
-            className="relative border rounded-lg p-4 flex flex-col cursor-pointer shadow-lg"
+            className="relative border rounded-lg p-4 flex flex-col cursor-pointer shadow-sm"
             to={`/products/${product.id}`}
         >
             <img src={product.image} loading="lazy" alt={product.name} className="w-60 h-44 object-contain mb-4 mx-auto" />
-            <h2 className="font-semibold text-lg">{product.name}</h2>
+            <h2 className="text-xl truncate">{product.name}</h2>
             <div className="text-red-500 flex items-center justify-between">
                 <div>
                     <span className="font-bold text-xl">{product.originalPrice}</span>

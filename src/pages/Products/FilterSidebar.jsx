@@ -24,7 +24,7 @@ const FilterSidebar = ({ setSearchParams, mobile }) => {
     };
 
     return (
-        <div className={`w-[293px] h-fit p-4 border bg-white rounded-2xl shadow-md ${mobile ? "hidden lg:block" : "flex flex-col"}`}>
+        <div className={`w-[293px] h-fit p-4 border bg-white rounded-2xl shadow-sm ${mobile ? "hidden lg:block" : "flex flex-col"}`}>
             {/* Categories */}
             <h3 className="text-lg font-semibold mb-4">الأقسام</h3>
             <div className="space-y-2 border-b pb-4">
@@ -66,16 +66,7 @@ const FilterSidebar = ({ setSearchParams, mobile }) => {
                     <span className="flex flex-col text-xs border border-gray-200 rounded-md px-6 py-1">إلى: <span className="text-sm font-semibold">{priceRange.max} ج</span></span>
                 </div>
                 {/* Range Slider */}
-                <div className="flex items-center">
-                    <input
-                        type="range"
-                        name="min"
-                        min="0"
-                        max="1000"
-                        value={priceRange.min}
-                        onChange={handleSliderChange}
-                        className="w-full accent-main"
-                    />
+                <div className="flex flex-col items-center">
                     <input
                         type="range"
                         name="max"

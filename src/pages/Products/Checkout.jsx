@@ -6,10 +6,16 @@ import { TbInfoOctagon } from "react-icons/tb";
 import { HiOutlineTicket } from "react-icons/hi2";
 import { IoCallOutline } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
-import VirticalRadio from "./VirticalRadio";
 import CartItem from "@/components/shared/CartItems";
 import Features from "../Home/Feature";
 import { Link } from "react-router-dom";
+import ProductOption from "@/components/shared/ProductOptions";
+import {
+    credit_1,
+    credit_2,
+    credit_3,
+
+} from "@/assets/index";
 
 const Checkout = () => {
     const [inputValue, setInputValue] = useState("");
@@ -21,15 +27,52 @@ const Checkout = () => {
         setIsValidCode(e.target.value === "DISCOUNT10");
     };
 
-
+    const productOptions = [
+        {
+            id: 1,
+            title: "الدفع عند الاستلام",
+            description: "احصل على الخصم الأفضل",
+            price: "6500",
+            originalPrice: "7000",
+            img: credit_1,
+            isBestOffer: false,
+        },
+        {
+            id: 2,
+            title: "بواسطة PayTabs",
+            description: "وفر الآن مع العرض",
+            price: "12000",
+            originalPrice: "13000",
+            img: credit_2,
+            isBestOffer: false, // Highlight as best offer
+        },
+        {
+            id: 3,
+            title: "بواسطة Paymob",
+            description: "وفر أكثر مع العرض",
+            price: "18000",
+            originalPrice: "19500",
+            img: credit_3,
+            isBestOffer: false,
+        },
+        {
+            id: 4,
+            title: "بواسطة بطاقة الإتمئنان",
+            description: "وفر أكثر مع العرض",
+            price: "18000",
+            originalPrice: "19500",
+            img: credit_3,
+            isBestOffer: false,
+        },
+    ];
     return (
         <div className="min-h-screen">
             <main className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Customer and Payment Details */}
                 <div className="bg-white">
                     {/* Customer Details */}
-                    <div className="mb-6 shadow-lg p-6 rounded-lg">
-                        <h2 className="text-2xl font-bold">يرجى إدخال بياناتك الشخصية</h2>
+                    <div className="mb-6 shadow-md p-6 rounded-lg">
+                        <h2 className="text-2xl font-bold mb-2">يرجى إدخال بياناتك الشخصية</h2>
                         <p className="text-gray-500 mb-4">قم بادخال بياناتك الشخصيه والتأكد منها لاتمام الطلب.</p>
                         <InputWithIcon
                             label="الأسم الكامل"
@@ -61,14 +104,16 @@ const Checkout = () => {
                     </div>
 
                     {/* Payment Method */}
-                    <div className="shadow-lg p-6 rounded-md">
+                    <div className="shadow-md p-6 rounded-md">
                         <h2 className="text-xl font-bold mb-4">طريقة الدفع</h2>
                         <p className="text-gray-500 mb-4">قم باختيار طريقه الدفع المناسبة لك</p>
-                        <VirticalRadio
+                        {/* <VirticalRadio
                             hiddenRadio={false}
                             hasIcon={true}
                             options={["الدفع عند الاستلام", "PayTabs بواسطة", "Paymob بواسطة", "بواسطة بطاقة الائتمان"]}
-                        />
+                        /> */}
+                        <ProductOption options={productOptions} price={false} />
+
                     </div>
                 </div>
 

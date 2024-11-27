@@ -9,7 +9,7 @@ export default {
     	extend: {
     		fontFamily: {
     			din: ['DIN Next LT W23', "sans-serif"],
-    			din_medium: ['DIN Next LT W23 MEDIUM', "sans-serif"]
+    			din_bold: ['DIN Next LT W23 BOLD', "sans-serif"]
     		},
     		borderRadius: {
     			lg: 'var(--radius)',

@@ -137,7 +137,7 @@ const Footer = () => {
                     </Link>
                 </div>
             </div>
-            <div className="text-center mt-10 py-4 text-gray-400 text-sm border-t border-gray-500">
+            <div className="text-center mt-32 py-4 text-gray-400 text-sm border-t border-gray-500">
                 <p className='flex flex-row-reverse justify-center'><span>© {new Date().getFullYear()}</span>Tasawq. All rights reserved</p>
             </div>
         </footer>

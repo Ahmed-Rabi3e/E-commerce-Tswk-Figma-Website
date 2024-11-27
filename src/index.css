@@ -13,10 +13,10 @@ html {
   font-style: normal;
 }
 @font-face {
-  font-family: "DIN Next LT W23 MEDIUM";
-  src: url("/fonts/din-next-lt-w23-medium.ttf") format("truetype"); 
-  font-weight: normal;
-  font-style: normal;
+  font-family: "DIN Next LT W23 BOLD";
+  src: url("/fonts/din-next-lt-w23-bold.ttf") format("truetype"); 
+  font-weight: bold;
+  font-style: bold;
 }
 
 [data-state="open"] > button {

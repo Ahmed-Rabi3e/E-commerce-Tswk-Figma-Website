@@ -20,7 +20,7 @@ const Hero = () => {
                             من أفضل منتجات هذا الشهر
                         </span>
                     </p>
-                    <h1 className="text-lg lg:text-3xl xl:text-4xl font-bold text-gray-900 leading-snug lg:leading-relaxed mb-4">
+                    <h1 className="text-lg lg:text-4xl xl:text-[50px] font-din_bold text-gray-900 leading-snug lg:leading-relaxed mb-4">
                         تشكيلة من سماعات الرأس اللاسلكية للألعاب
                     </h1>
                     <p className="text-gray-500 text-sm lg:text-md xl:text-lg mb-6 leading-relaxed">
@@ -38,7 +38,7 @@ const Hero = () => {
                         loading="lazy"
                         src={hero}
                         alt="Gaming Headphones"
-                        className="w-[500px] lg:w-[600px] xl:w-[900px] object-contain"
+                        className="w-[500px] lg:w-[785px] xl:w-[900px] object-contain"
                     />
                 </div>
             </div>

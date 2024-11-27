@@ -22,7 +22,7 @@ const mockProducts = [
         name: "سامسونج الترا جالاكسي. شريحتان اتصال بلون بنفسجي تيتانيوم.",
         category: "mobiles",
         price: 2000,
-        image:category_3,
+        image: category_3,
         originalPrice: "7000ج",
         rating: "4.2/5",
     },
@@ -36,30 +36,39 @@ const mockProducts = [
         rating: "4.2/5",
     },
     {
-        id: 4,
-        name: "سامسونج الترا جالاكسي. شريحتان اتصال بلون بنفسجي.",
-        category: "mobiles",
+        id: 1,
+        name: "لابتوب ديل إنسبايرون 15 - معالج i5 وذاكرة 8 جيجا",
+        category: "laptops",
+        price: 4000,
+        image: pro_1,
+        originalPrice: "5000ج",
+        rating: "4.5/5",
+    },
+    {
+        id: 2,
+        name: "تابلت سامسونج جلاكسي تاب A8 - شاشة 10 بوصة",
+        category: "tablets",
+        price: 2000,
+        image: category_3,
+        originalPrice: "3000ج",
+        rating: "4.0/5",
+    },
+    {
+        id: 3,
+        name: "لابتوب اتش بي بافيليون 14 - معالج Ryzen 5 وشاشة 14 بوصة",
+        category: "laptops",
+        price: 4500,
+        image: product_1,
+        originalPrice: "5500ج",
+        rating: "4.6/5",
+    },
+    {
+        id: 1,
+        name: "تابلت لينوفو P11 برو - ذاكرة 6 جيجا وشاشة OLED",
+        category: "tablets",
         price: 3000,
         image: pro_1,
-        originalPrice: "7000ج",
-        rating: "4.2/5",
-    },
-    {
-        id: 5,
-        name: "سامسونج الترا جالاكسي. شريحتان اتصال بلون بنفسجي تيتانيوم.",
-        category: "mobiles",
-        price: 2000,
-        image:category_3,
-        originalPrice: "7000ج",
-        rating: "4.2/5",
-    },
-    {
-        id: 6,
-        name: "سامسونج الترا جالاكسي. شريحتان اتصال بلون بنفسجي تيتانيوم.",
-        category: "mobiles",
-        price: 1500,
-        image: product_1,
-        originalPrice: "7000ج",
+        originalPrice: "4000ج",
         rating: "4.2/5",
     },
 ];
@@ -94,7 +103,7 @@ const Products = () => {
                         <h3 className="hidden lg:block"><span className="text-sm ml-1 text-text_gray">ترتيب حسب </span><select name="" id="" className="text-sm text-text_gray border rounded-md px-2 py-1"> <option value="">الاعلي تقييماً</option></select></h3>
                         <DrawerDemo setSearchParams={setSearchParams} />
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
                         {filteredProducts.length ? (
                             filteredProducts.map((product) => (
                                 <ProductCard key={product.id} product={product} />

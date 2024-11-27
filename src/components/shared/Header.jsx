@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { TfiMenuAlt, TfiClose } from "react-icons/tfi";
 import Cart from "@/components/shared/Cart";
-import { logo } from '@/assets/index'
+import { logo_2 } from '@/assets/index'
 
 
 const Header = () => {
@@ -28,12 +28,10 @@ const Header = () => {
                         {isMobileMenuOpen ? <TfiClose size={25} /> : <TfiMenuAlt size={25} />}
                     </button>
                     <img
-                        src={logo}
+                        src={logo_2}
                         alt="Logo"
                         loading="lazy"
-                        className="w-10 h-10"
                     />
-                    <span className="text-3xl font-bold text-sec">تسوق</span>
                 </div>
 
                 <ul className="hidden lg:flex space-x-8 space-x-reverse">
@@ -54,11 +52,9 @@ const Header = () => {
                 </ul>
 
                 {/* Icons */}
-                <div className="flex items-center gap-6">
-                    <button className="text-gray-600 hover:text-main">
-                        <FiSearch size={22} />
-                    </button>
-                    <Cart />
+                <div className="flex gap-6">
+                    <FiSearch size={22} className="text-gray-600 hover:text-main" />
+                    <Cart color={false} />
                 </div>
             </nav>
 

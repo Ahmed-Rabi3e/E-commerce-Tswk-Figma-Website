@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Heading from "./Heading";
 import { HiArrowNarrowLeft, HiArrowNarrowRight, HiStar } from "react-icons/hi";
-import { FaCartShopping } from "react-icons/fa6";
 import { product_1, product_2, product_3, product_4, product_5 } from "@/assets/index";
+import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 const products = [
     {
@@ -104,24 +105,22 @@ const Carousel = ({ head, hasCount }) => {
             <div className="container mx-auto px-4">
                 <Heading label={head} hasCount={hasCount}>
                     <div className="flex items-center gap-2">
-                        {/* Previous Button */}
                         <button
                             onClick={handlePrev}
                             disabled={currentPage === 0}
-                            className={`bg-white drop-shadow-lg text-main p-2 rounded-full ${currentPage === 0
-                                    ? "opacity-50 cursor-not-allowed"
-                                    : "hover:bg-main hover:text-white"
+                            className={`bg-main drop-shadow-lg text-white p-2 rounded-full ${currentPage === 0
+                                ? "opacity-50 cursor-not-allowed"
+                                : "hover:bg-white hover:text-main"
                                 }`}
                         >
                             <HiArrowNarrowRight />
                         </button>
-                        {/* Next Button */}
                         <button
                             onClick={handleNext}
                             disabled={currentPage === totalPages - 1}
                             className={`bg-white drop-shadow-lg text-main p-2 rounded-full ${currentPage === totalPages - 1
-                                    ? "opacity-50 cursor-not-allowed"
-                                    : "hover:bg-main hover:text-white"
+                                ? "opacity-50 cursor-not-allowed"
+                                : "hover:bg-main hover:text-white"
                                 }`}
                         >
                             <HiArrowNarrowLeft />
@@ -130,18 +129,15 @@ const Carousel = ({ head, hasCount }) => {
                 </Heading>
 
                 {/* Product Carousel */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                     {getCurrentProducts().map((product) => (
                         <div
                             key={product.id}
-                            className="bg-white rounded-lg shadow-md p-4 relative w-full"
+                            className="bg-white rounded-lg shadow-sm shadow-gray-300 p-4 relative"
                         >
-                            {/* Discount Badge */}
                             <div className="absolute bg-red-500 text-white text-xs rounded-tl-lg rounded-br-lg px-2 py-1 top-2 right-2">
                                 {product.discount}
                             </div>
-
-                            {/* Product Image */}
                             <img
                                 src={product.image}
                                 alt={product.title}
@@ -149,35 +145,38 @@ const Carousel = ({ head, hasCount }) => {
                                 className="w-full h-40 object-contain"
                             />
 
-                            {/* Product Details */}
-                            <div className="mt-4">
-                                <h3 className="text-sm text-sec font-semibold mb-2">
+                            {/* Updated Product Details */}
+                            <div className="mt-4 overflow-hidden flex flex-col">
+                                <Link
+                                    to={`/products/${product.id}`}
+                                    className="text-sm truncate hover:text-main text-sec font-semibold mb-2"
+                                >
                                     {product.title}
-                                </h3>
-                                <div className="text-red-500 flex items-center justify-between">
+                                </Link>
+                                <div className="text-red-500 flex items-center justify-between flex-wrap">
                                     <div>
                                         <span className="font-bold text-xl">{product.price}</span>
-                                        <span className="line-through text-gray-400 text-sm mx-2">
+                                        <span className="line-through text-gray-400 text-sm mr-2">
                                             {product.originalPrice}
                                         </span>
                                     </div>
-                                    <div className="flex justify-center items-center">
-                                        <span className="text-gray-600">{product.rating}</span>{" "}
-                                        <HiStar className="fill-yellow-500" />
+                                    <div className="flex justify-center items-center text-sm mt-2">
+                                        <span className="text-gray-600">{product.rating}</span>
+                                        <span>
+                                            <HiStar className="fill-yellow-500 mt-1" />
+                                        </span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Add to Cart */}
-                            <button className="absolute top-1/2 left-4 bg-main text-white p-2 rounded-md hover:bg-main/75 transition">
-                                <FaCartShopping />
+                            <button className="absolute top-1/2 translate-y-2 px-1 pt-1 left-2 bg-main text-white rounded-md hover:bg-main/75 transition">
+                                <Cart color={true} />
                             </button>
                         </div>
                     ))}
                 </div>
             </div>
         </section>
-
     );
 };
 

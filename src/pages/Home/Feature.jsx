@@ -30,7 +30,7 @@ const features = [
 const Features = () => {
     return (
         <section className="bg-white my-8 drop-shadow-md">
-            <div className="container mx-auto px-3 sm:px-6 lg:px-8">
+            <div className="container mx-auto px-3 sm:px-6 lg:px-8 py-5">
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {features.map((feature, index) => (
                         <div
@@ -43,14 +43,12 @@ const Features = () => {
                                         : ""
                                     }`}
                             >
-                                {/* Feature Icon */}
                                 <img
                                     src={feature.icon}
                                     alt={feature.title}
                                     loading="lazy"
                                     className="w-8 h-8 lg:w-11 lg:h-11"
                                 />
-                                {/* Title and Description */}
                                 <div>
                                     <h3 className="text-xs sm:text-lg font-semibold text-gray-900 mb-2">
                                         {feature.title}

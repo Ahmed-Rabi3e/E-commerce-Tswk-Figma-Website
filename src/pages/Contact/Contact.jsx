@@ -2,10 +2,10 @@ import NavigationBar from "@/components/shared/NavigationBar";
 
 const Contact = () => {
     return (
-        <div className="py-10 px-4 sm:px-8">
+        <div className="px-4 sm:px-8">
             <NavigationBar />
 
-            <div className="max-w-4xl mx-auto mt-4">
+            <div className="max-w-4xl mx-auto mt-4 py-10 ">
                 {/* Section Title */}
                 <section className="text-right">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">تواصل معنا</h2>

@@ -4,8 +4,8 @@ import {
 } from '@/assets/index'
 
 const categories = [
-    { id: 2, image: category_1, label: "لابتوب" },
-    { id: 1, image: category_2, label: "ايباد" },
+    { id: 1, image: category_1, label: "لابتوب" },
+    { id: 2, image: category_2, label: "ايباد" },
     { id: 3, image: category_3, label: "ايفون" },
     { id: 4, image: category_4, label: "سماعات" },
     { id: 5, image: category_5, label: "كاميرا" },
@@ -32,7 +32,7 @@ const Categories = () => {
                                 loading="lazy"
                                 className="w-44 h-44 object-contain"
                             />
-                            <p className="mt-2 text-xl sm:text-base font-medium text-gray-700 text-center">
+                            <p className="text-xl sm:text-base font-bold text-gray-700 text-center">
                                 {category.label}
                             </p>
                         </div>

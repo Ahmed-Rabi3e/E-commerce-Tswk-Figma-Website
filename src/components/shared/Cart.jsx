@@ -5,19 +5,19 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import { FiShoppingCart } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import CartItem from "./CartItems";
+import { cart_icon, cart_icon_balck } from "@/assets/index";
 
-const Cart = () => {
+const Cart = ({ color }) => {
     return (
-        <div className="text-gray-600 hover:text-main mt-2">
+        <div className={`text-gray-600`}>
             <Sheet>
                 <SheetTrigger>
-                    <FiShoppingCart size={22} />
+                    {color ? <img src={cart_icon} alt="shopping-icon" /> : <img src={cart_icon_balck} alt="shopping-icon" />}
                 </SheetTrigger>
                 <SheetContent side="left">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center font-din">
                         {/* Title */}
                         <div className="flex gap-4 items-center">
                             <SheetTitle className="text-3xl">السلة <span className="text-2xl font-normal">(1)</span></SheetTitle>
@@ -30,7 +30,7 @@ const Cart = () => {
                         </button>
                     </div>
                     <SheetDescription className="mt-4">
-                        <CartItem hasDelete={true}/>
+                        <CartItem hasDelete={true} />
                         {/* Total Price & Actions */}
                         <div className="mt-4">
                             <div className="flex flex-col sm:flex-row items-center sm:justify-between pt-4">
@@ -39,11 +39,11 @@ const Cart = () => {
                                 </p>
                                 <p className="text-base md:text-lg font-bold text-gray-800">6500ج</p>
                             </div>
-                            <div className="w-full flex justify-center gap-2 mt-4">
-                                <button className="px-12 py-2 text-white bg-main rounded-3xl hover:bg-main/80">
+                            <div className="flex justify-center text-sm gap-4 mt-4">
+                                <button className="px-6 py-2 w-full text-white bg-main rounded-3xl hover:bg-main/80">
                                     إتمام الشراء
                                 </button>
-                                <button className="px-12 py-2 text-main border border-main rounded-3xl hover:bg-main/10">
+                                <button className="px-6 py-2 w-full text-main border border-main rounded-3xl hover:bg-main/10">
                                     متابعة التسوق
                                 </button>
                             </div>

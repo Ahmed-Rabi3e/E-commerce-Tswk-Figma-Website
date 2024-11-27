@@ -5,6 +5,7 @@ import {
     DrawerClose,
     DrawerContent,
     DrawerFooter,
+    DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer"
 import { HiArrowsUpDown } from "react-icons/hi2";
@@ -19,12 +20,13 @@ export function DrawerDemo({ setSearchParams }) {
                 <Button variant="outline" className='rounded-md px-3 block lg:hidden'><HiArrowsUpDown /></Button>
             </DrawerTrigger>
             <DrawerContent>
-                <div className="mx-auto w-full max-w-sm p-8">
+                <div className="mx-auto font-din">
+                    <DrawerTitle className='text-center my-2 text-xl font-bold'>تصنيفات</DrawerTitle>
                     <FilterSidebar setSearchParams={setSearchParams} mobile={false} />
                 </div>
                 <DrawerFooter>
                     <DrawerClose asChild>
-                        <Button>Cancel</Button>
+                        <button className="bg-main px-28 py-2 rounded-3xl text-white w-fit mx-auto">تطبيق</button>
                     </DrawerClose>
                 </DrawerFooter>
             </DrawerContent>

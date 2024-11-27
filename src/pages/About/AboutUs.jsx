@@ -2,9 +2,9 @@ import NavigationBar from "@/components/shared/NavigationBar";
 
 const About = () => {
     return (
-        <div className="py-10 px-4 sm:px-8">
+        <div className="px-4 sm:px-8">
             <NavigationBar />
-            <div className="max-w-5xl mx-auto mt-4">
+            <div className="max-w-5xl mx-auto mt-4 py-10">
                 {/* Section: About */}
                 <section className="text-right mb-10">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">عنّا</h2>

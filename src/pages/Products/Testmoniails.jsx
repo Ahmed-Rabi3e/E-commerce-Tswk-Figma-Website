@@ -10,7 +10,7 @@ const Testmoniails = () => {
             <div className="flex flex-col md:flex-row justify-between items-center">
                 <div className="text-center md:text-right md:w-1/2">
                     <p className="mb-4">بعض من تقيمات عملائنا عن هذا المنتج. اطلب الان واكتب تقييمك</p>
-                    <button className="px-6 py-2 bg-blue-500 text-white rounded-md">اكتب تقييمك</button>
+                    <button className="px-6 py-2 bg-blue-500 text-white rounded-md mb-8">اكتب تقييمك</button>
                 </div>
                 <img
                     src={rating}
