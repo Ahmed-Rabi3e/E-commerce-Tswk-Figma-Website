@@ -35,7 +35,7 @@ import cart_icon_balck from "/src/assets/shopping-cart-black.png"
 import credit_1 from "/src/assets/credit-1.png"
 import credit_2 from "/src/assets/credit-2.png"
 import credit_3 from "/src/assets/credit-3.png"
-// import credit_4 from "/src/assets/credit-1.pngsrc/assets/credit-card (1) 1.png"
+import credit_4 from "/src/assets/credit-4.png"
 
 
 import user from "/src/assets/user.webp"
@@ -53,5 +53,5 @@ export {
     pro_1, rating, user, succuss, faild, cart_icon, cart_icon_balck, credit_1,
     credit_2,
     credit_3,
-    // credit_4,
+    credit_4,
 }  

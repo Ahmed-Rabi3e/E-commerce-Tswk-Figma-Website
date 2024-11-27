@@ -169,9 +169,9 @@ const Carousel = ({ head, hasCount }) => {
                                 </div>
                             </div>
 
-                            <button className="absolute top-1/2 translate-y-2 px-1 pt-1 left-2 bg-main text-white rounded-md hover:bg-main/75 transition">
+                            <div className="absolute top-1/2 translate-y-2 px-1 pt-1 left-2 bg-main text-white rounded-md hover:bg-main/75 transition">
                                 <Cart color={true} />
-                            </button>
+                            </div>
                         </div>
                     ))}
                 </div>

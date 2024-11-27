@@ -16,12 +16,12 @@ const QuantityControl = ({ hasDelete }) => {
     return (
         <div className="flex items-center gap-2">
             <div className="flex items-center border border-gray-300 rounded-3xl overflow-hidden w-fit">
-                <button
+                <div
                     onClick={handleIncrease}
                     className="text-main hover:bg-gray-100 px-2 py-1"
                 >
                     <HiPlus size={18} />
-                </button>
+                </div>
                 {/* Input Field */}
                 <input
                     type="number"
@@ -29,19 +29,23 @@ const QuantityControl = ({ hasDelete }) => {
                     readOnly
                     className="w-10 text-center text-sec outline-none text-xl border-x border-gray-300"
                 />
-                <button
+                <div
                     onClick={handleDecrease}
                     className="text-main hover:bg-gray-100 px-2 py-1"
                 >
                     <HiMinus size={18} />
-                </button>
+                </div>
             </div>
-            {hasDelete &&
-                <button
-                    className="text-sec p-2 hover:bg-gray-100 rounded-full focus:outline-none"
+
+            {/* Delete Option */}
+            {hasDelete && (
+                <div
+                    role="button"
+                    className="text-sec p-2 hover:bg-gray-100 rounded-full focus:outline-none cursor-pointer"
                 >
                     <RiDeleteBinLine size={20} />
-                </button>}
+                </div>
+            )}
         </div>
     );
 };

@@ -13,14 +13,24 @@ const Cart = ({ color }) => {
     return (
         <div className={`text-gray-600`}>
             <Sheet>
+                {/* Cart Trigger */}
                 <SheetTrigger>
-                    {color ? <img src={cart_icon} alt="shopping-icon" /> : <img src={cart_icon_balck} alt="shopping-icon" />}
+                    {color ? (
+                        <img src={cart_icon} alt="shopping-icon" />
+                    ) : (
+                        <img src={cart_icon_balck} alt="shopping-icon" />
+                    )}
                 </SheetTrigger>
+                <SheetDescription>
+                </SheetDescription>
+                {/* Cart Content */}
                 <SheetContent side="left">
+                    {/* Header */}
                     <div className="flex justify-between items-center font-din">
-                        {/* Title */}
                         <div className="flex gap-4 items-center">
-                            <SheetTitle className="text-3xl">السلة <span className="text-2xl font-normal">(1)</span></SheetTitle>
+                            <SheetTitle className="text-3xl">
+                                السلة <span className="text-2xl font-normal">(1)</span>
+                            </SheetTitle>
                         </div>
                         <button
                             className="p-2 hover:bg-gray-100 rounded-full focus:outline-none"
@@ -29,16 +39,25 @@ const Cart = ({ color }) => {
                             <MdClose size={20} />
                         </button>
                     </div>
-                    <SheetDescription className="mt-4">
-                        <CartItem hasDelete={true} />
+
+                    {/* Cart Items */}
+                    <div className="mt-4">
+                        <CartItem hasDelete={true} hasCount={true} />
+
                         {/* Total Price & Actions */}
                         <div className="mt-4">
                             <div className="flex flex-col sm:flex-row items-center sm:justify-between pt-4">
-                                <p className="text-base md:text-lg font-semibold text-gray-800">
+                                {/* Total Label */}
+                                <div className="text-base md:text-lg font-semibold text-gray-800">
                                     إجمالي السلة:
-                                </p>
-                                <p className="text-base md:text-lg font-bold text-gray-800">6500ج</p>
+                                </div>
+                                {/* Total Price */}
+                                <div className="text-base md:text-lg font-bold text-gray-800">
+                                    6500ج
+                                </div>
                             </div>
+
+                            {/* Action Buttons */}
                             <div className="flex justify-center text-sm gap-4 mt-4">
                                 <button className="px-6 py-2 w-full text-white bg-main rounded-3xl hover:bg-main/80">
                                     إتمام الشراء
@@ -48,7 +67,7 @@ const Cart = ({ color }) => {
                                 </button>
                             </div>
                         </div>
-                    </SheetDescription>
+                    </div>
                 </SheetContent>
             </Sheet>
         </div>

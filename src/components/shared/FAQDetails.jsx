@@ -17,22 +17,22 @@ const FAQDetails = ({ label, Icon, description, isLast, open = false }) => {
                 className={`${isOpen
                     ? "bg-white ring-1 ring-black/5 transition duration-200"
                     : ""
-                    } p-6 rounded-lg`}
+                    } p-6 rounded-3xl`}
             >
                 {/* Summary */}
-                <button
+                <div
                     onClick={toggleDetails}
-                    className="text-lg leading-6 flex items-center justify-between text-slate-900 dark:text-white font-semibold select-none w-full text-right"
+                    className="text-lg cursor-pointer leading-6 flex items-center justify-between text-slate-900 font-semibold select-none w-full text-right"
                 >
                     <span className="flex items-center">
                         <span className="mx-2"><Icon size={20} /></span>{label}
                     </span>
                     {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                </button>
+                </div>
 
                 {/* Content */}
                 {isOpen && (
-                    <div className="mt-3 text-sm leading-6 text-gray-500 dark:text-slate-400">
+                    <div className="mt-3 text-sm leading-6 text-gray-500">
                         <p>{description}</p>
                     </div>
                 )}

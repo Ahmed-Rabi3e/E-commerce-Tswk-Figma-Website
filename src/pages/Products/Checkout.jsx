@@ -14,7 +14,7 @@ import {
     credit_1,
     credit_2,
     credit_3,
-
+    credit_4,
 } from "@/assets/index";
 
 const Checkout = () => {
@@ -61,13 +61,13 @@ const Checkout = () => {
             description: "وفر أكثر مع العرض",
             price: "18000",
             originalPrice: "19500",
-            img: credit_3,
+            img: credit_4,
             isBestOffer: false,
         },
     ];
     return (
-        <div className="min-h-screen">
-            <main className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="">
+            <main className="container mx-auto px-8 py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Customer and Payment Details */}
                 <div className="bg-white">
                     {/* Customer Details */}
@@ -107,11 +107,6 @@ const Checkout = () => {
                     <div className="shadow-md p-6 rounded-md">
                         <h2 className="text-xl font-bold mb-4">طريقة الدفع</h2>
                         <p className="text-gray-500 mb-4">قم باختيار طريقه الدفع المناسبة لك</p>
-                        {/* <VirticalRadio
-                            hiddenRadio={false}
-                            hasIcon={true}
-                            options={["الدفع عند الاستلام", "PayTabs بواسطة", "Paymob بواسطة", "بواسطة بطاقة الائتمان"]}
-                        /> */}
                         <ProductOption options={productOptions} price={false} />
 
                     </div>
@@ -120,7 +115,7 @@ const Checkout = () => {
                 {/* Order Summary */}
                 <div className="bg-white py-6 px-8 rounded-lg shadow-md">
                     <h2 className="text-2xl font-bold mb-4">ملخص الطلب</h2>
-                    <CartItem />
+                    <CartItem hasCount={true} />
 
                     {/* Discount Code */}
                     <div className="mt-4">

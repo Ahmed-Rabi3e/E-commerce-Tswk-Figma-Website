@@ -1,10 +1,30 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const CustomRadioButtons = ({ label, options }) => {
-    const [selectedValue, setSelectedValue] = useState("");
+const CustomRadioButtons = ({ label, options, queryKey }) => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    // Extract the current query parameters
+    const queryParams = new URLSearchParams(location.search);
+
+    // Get the initial value from the URL for this queryKey
+    const initialValue = queryParams.get(queryKey) || "";
+
+    const [selectedValue, setSelectedValue] = useState(initialValue);
 
     const handleChange = (value) => {
         setSelectedValue(value);
+
+        // Update only the relevant query parameter
+        if (value) {
+            queryParams.set(queryKey, value); // Update the specific key
+        } else {
+            queryParams.delete(queryKey); // Remove key if no value
+        }
+
+        // Navigate to the updated URL
+        navigate(`?${queryParams.toString()}`);
     };
 
     return (
@@ -16,7 +36,7 @@ const CustomRadioButtons = ({ label, options }) => {
                         {/* Hidden Radio Input */}
                         <input
                             type="radio"
-                            name="custom-radio"
+                            name={`custom-radio-${queryKey}`}
                             value={option}
                             className="hidden"
                             onChange={() => handleChange(option)}

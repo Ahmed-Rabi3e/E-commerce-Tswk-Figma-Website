@@ -72,7 +72,7 @@ const ImageSlider = ({ images }) => {
                                 src={image}
                                 loading="lazy"
                                 alt={`Thumbnail ${index + 1}`}
-                                className="cursor-pointer rounded-lg border-2 p-8 border-transparent hover:border-main"
+                                className="cursor-pointer rounded-lg border-2 p-4 lg:p-8 border-transparent hover:border-main"
                             />
                         </SwiperSlide>
                     ))}

@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
 import { category_3, pro_1, product_1 } from "@/assets";
 import FAQDetails from "@/components/shared/FAQDetails";
 import ImageSlider from "@/components/shared/ImageSlider";
 import InputWithIcon from "@/components/shared/InputComponent";
 import NavigationBar from "@/components/shared/NavigationBar";
+import ProductOption from "@/components/shared/ProductOptions";
 import QuantityControl from "@/components/shared/QuelityButton";
-import CustomRadioButtons from "./CustomRadio";
-import Testmoniails from "./Testmoniails";
-import VirticalRadio from "./VirticalRadio";
+import { useEffect, useState } from "react";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { FaRegUser, FaShoppingCart } from "react-icons/fa";
 import { HiStar } from "react-icons/hi";
 import { IoCallOutline } from "react-icons/io5";
 import { LiaShippingFastSolid } from "react-icons/lia";
-import { MdOutlinePayments, MdOutlineHeadsetMic } from "react-icons/md";
-import { Link, useParams } from "react-router-dom";
+import { MdOutlineHeadsetMic, MdOutlinePayments } from "react-icons/md";
 import { RiArrowGoBackFill } from "react-icons/ri";
-import ProductOption from "@/components/shared/ProductOptions";
+import { Link, useParams } from "react-router-dom";
+import CustomRadioButtons from "./CustomRadio";
+import Testmoniails from "./Testmoniails";
+import VirticalRadio from "./VirticalRadio";
 
 const mockProducts = [
     {
@@ -53,7 +53,6 @@ const productOptions = [
         description: "احصل على الخصم الأفضل",
         price: "6500",
         originalPrice: "7000",
-        img: product_1,
         isBestOffer: false,
     },
     {
@@ -62,8 +61,7 @@ const productOptions = [
         description: "وفر الآن مع العرض",
         price: "12000",
         originalPrice: "13000",
-        icon: true,
-        isBestOffer: true, // Highlight as best offer
+        isBestOffer: true,
     },
     {
         id: 3,
@@ -71,7 +69,6 @@ const productOptions = [
         description: "وفر أكثر مع العرض",
         price: "18000",
         originalPrice: "19500",
-        icon: false, // No icon for this option
         isBestOffer: false,
     },
 ];
@@ -127,19 +124,21 @@ const ProductDetails = () => {
                         {/* Options */}
                         <CustomRadioButtons
                             label="المساحة:"
+                            queryKey="space"
                             options={["20x30", "30x40", "40x50", "50x60", "60x70"]}
                         />
                         <CustomRadioButtons
                             label="اللون:"
+                            queryKey="color"
                             options={["رمادي", "سيلفر", "ازرق", "احمر", "بنفسجي"]}
                         />
 
                         {/* Add to Cart Section */}
                         <div className="flex flex-col md:flex-row items-center md:justify-start gap-8 mt-8">
-                            <button className="flex items-center justify-center gap-2 text-white bg-sec px-6 py-2 rounded-3xl w-full md:w-2/3">
-                                <FaShoppingCart />
+                            <div className="flex items-center justify-center gap-2 text-white bg-sec px-6 py-2 rounded-3xl w-full md:w-2/3">
+                                <p><FaShoppingCart /></p>
                                 <span>اضف الي السلة</span>
-                            </button>
+                            </div>
                             <QuantityControl />
                         </div>
 
@@ -189,12 +188,6 @@ const ProductDetails = () => {
                             <span>عروض التوفير</span>
                         </h1>
                         <ProductOption options={productOptions} price={true} />
-                        {/* <VirticalRadio
-                            label="المساحة:"
-                            hiddenRadio={false}
-                            hasOffer={true}
-                            options={["منتج واحد فقط", "اشتري 2 و احصل على خصم 10٪", "اشتري 3 و احصل على خصم 15٪"]}
-                        /> */}
                         <div className="flex items-center justify-between px-4 pt-6">
                             <p className="text-base md:text-lg font-semibold text-gray-800">
                                 إجمالي المبلغ:
@@ -210,7 +203,7 @@ const ProductDetails = () => {
                             </p>
                         </div>
 
-                        <div className="border m-6 rounded-3xl">
+                        <div className="border-2 m-6 rounded-3xl">
                             <FAQDetails
                                 open={true}
                                 label='سياسة الدفع عند الاستلام'

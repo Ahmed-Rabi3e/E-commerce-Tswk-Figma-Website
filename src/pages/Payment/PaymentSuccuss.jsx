@@ -19,16 +19,16 @@ const PaymentSuccess = () => {
         <p className="text-lg sm:text-3xl my-2 font-semibold text-main">
           لقد تم تأكيد طلبك بنجاح!
         </p>
-        <p className="text-gray-500 text-lg">
+        <p className="text-gray-500 text-lg mt-4">
           لقد قمنا بإستلام طلبك وسيتم التواصل معك في أقرب وقت لاستلام طلبك.
         </p>
       </div>
 
       {/* Order Summary */}
-      <div className="bg-white shadow-md rounded-lg w-full max-w-md mt-6 p-6">
+      <div className="bg-white shadow-md rounded-lg w-[400px] lg:w-[660px] mt-6 p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">ملخص الطلب</h2>
         <CartItem />
-        <div className="text-lg text-gray-500 space-y-1 mt-4">
+        <div className="text-lg text-gray-500 space-y-1 mt-4 font-medium">
           <div className="flex justify-between">
             <p>الســـلع</p>
             <p className="font-medium">2500</p>
