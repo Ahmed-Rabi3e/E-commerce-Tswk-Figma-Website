@@ -3,34 +3,36 @@
 @tailwind utilities;
 
 html {
-  direction: rtl; /* Change to ltr for English */
+  direction: rtl;
+  /* Change to ltr for English */
 }
 
 @font-face {
   font-family: "DIN Next LT W23";
-  src: url("/fonts/DIN Next LT W23 Regular-29d5cc9399fee3fea467ed7bcb64db8591092806574f0c4c583b57c48bfccaf6.ttf") format("truetype"); 
+  src: url("/fonts/DIN Next LT W23 Regular-29d5cc9399fee3fea467ed7bcb64db8591092806574f0c4c583b57c48bfccaf6.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "DIN Next LT W23 BOLD";
-  src: url("/fonts/din-next-lt-w23-bold.ttf") format("truetype"); 
+  src: url("/fonts/din-next-lt-w23-bold.ttf") format("truetype");
   font-weight: bold;
   font-style: bold;
 }
 
-[data-state="open"] > button {
+[data-state="open"]>button {
   display: none;
 }
 
-.scrollbar-hide {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
+/* .scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
-}
+  display: none;
+} */
 
 @layer base {
   :root {
@@ -60,6 +62,7 @@ html {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
@@ -87,10 +90,12 @@ html {
     --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

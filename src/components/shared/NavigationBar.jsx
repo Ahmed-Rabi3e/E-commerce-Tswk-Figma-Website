@@ -2,7 +2,7 @@ import { Link, useLocation, useParams } from "react-router-dom";
 
 const NavigationBar = ({ productName }) => {
     const location = useLocation();
-    const { id } = useParams(); 
+    const { id } = useParams();
     const pathnames = location.pathname.split("/").filter((x) => x);
 
     const breadcrumbItems = [
@@ -22,9 +22,13 @@ const NavigationBar = ({ productName }) => {
                     name = "معلومات عنا";
                     break;
                 default:
-                    // If the segment is dynamic (e.g., a product), use productName or the ID
+                    // If the segment is dynamic (e.g., a product), use the first 3 words of productName or fallback to the ID
                     if (path.includes("/product") && index > 0) {
-                        name = productName || `منتج ${id}`;
+                        if (productName) {
+                            name = productName.split(" ").slice(0, 3).join(" "); // Get the first 3 words
+                        } else {
+                            name = `منتج ${id}`;
+                        }
                     }
                     break;
             }
@@ -43,8 +47,8 @@ const NavigationBar = ({ productName }) => {
                         <li
                             key={index}
                             className={`flex items-center ${isLast
-                                    ? "text-main font-bold"
-                                    : "text-[#767676] hover:text-blue-500"
+                                ? "text-main font-bold"
+                                : "text-[#767676] hover:text-blue-500"
                                 }`}
                         >
                             {!isLast ? (

@@ -93,12 +93,12 @@ const ProductDetails = () => {
                 {/* Product Details */}
                 <div className="flex flex-col lg:flex-row gap-6">
                     {/* Image Slider Section */}
-                    <div className="w-full lg:w-1/2 shadow-xl h-fit rounded-xl lg:sticky lg:top-0">
+                    <div className="w-full lg:w-1/2 h-fit rounded-xl lg:sticky lg:top-0">
                         <ImageSlider images={product.images} />
                     </div>
 
                     {/* Product Details Section */}
-                    <div className="w-full lg:w-1/2 shadow-xl p-4 rounded-xl">
+                    <div className="w-full lg:w-1/2 shadow-sm p-4 rounded-xl">
                         <div className="flex items-center">
                             <HiStar className="fill-yellow-500 text-lg" />
                             <span className="ml-2 text-lg font-medium">{product.rating}</span>
@@ -133,10 +133,10 @@ const ProductDetails = () => {
                         />
 
                         {/* Add to Cart Section */}
-                        <div className="flex flex-col md:flex-row items-center md:justify-start gap-8 mt-8">
-                            <div className="flex items-center justify-center gap-2 text-white bg-sec px-6 py-2 rounded-3xl w-full md:w-2/3">
+                        <div className="flex items-center md:justify-start gap-6 mt-8">
+                            <div className="flex items-center justify-center gap-2 text-white bg-sec px-6 py-2 rounded-3xl w-full h-12 md:w-2/3">
                                 <p><FaShoppingCart /></p>
-                                <span>اضف الي السلة</span>
+                                <span className="text-sm lg:text-xl">اضف الي السلة</span>
                             </div>
                             <QuantityControl />
                         </div>
@@ -193,7 +193,7 @@ const ProductDetails = () => {
                             </p>
                             <p className="text-base md:text-lg font-bold text-gray-800">6500ج</p>
                         </div>
-                        <Link to='/checkout' className="w-full py-3 pb-4 text-xl rounded-3xl my-6 text-white bg-main px-6 flex justify-center items-center">اشتري الان - الدفع عند الاستلام</Link>
+                        <Link to='/checkout' className="w-full py-3 pb-4 text-xl rounded-3xl my-6 text-white bg-main px-6 flex justify-center items-center shadow-inner shadow-white">اشتري الان - الدفع عند الاستلام</Link>
 
                         <div className="p-4">
                             <h3 className="text-xl font-semibold">تفاصيل عن المنتج:</h3>

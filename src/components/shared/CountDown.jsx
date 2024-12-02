@@ -29,18 +29,18 @@ const CountdownTimer = ({ initialTime }) => {
     const { hours, minutes, seconds } = calculateTimeParts(timeLeft);
 
     return (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center -mt-2">
             <div className="flex items-center gap-2 text-sm sm:text-xl text-red-500 px-3">
                 <div className="flex items-center">
-                    <span className="font-bold bg-red-200 rounded px-1 py-0.5 mt-2">{seconds}</span>
+                    <span className="font-bold bg-red-200 rounded px-1 pb-0.5 mt-2">{seconds}</span>
                 </div>
                 <span className="text-xl sm:text-2xl">:</span>
                 <div className="flex items-center">
-                    <span className="font-bold bg-red-200 rounded px-1 py-0.5 mt-2">{minutes}</span>
+                    <span className="font-bold bg-red-200 rounded px-1 pb-0.5 mt-2">{minutes}</span>
                 </div>
                 <span className="text-xl sm:text-2xl">:</span>
                 <div className="flex items-center">
-                    <span className="font-bold bg-red-200 rounded px-1 py-0.5 mt-2">{hours}</span>
+                    <span className="font-bold bg-red-200 rounded px-1 pb-0.5 mt-2">{hours}</span>
                 </div>
 
 

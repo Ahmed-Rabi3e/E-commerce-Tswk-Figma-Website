@@ -15,10 +15,10 @@ const QuantityControl = ({ hasDelete }) => {
 
     return (
         <div className="flex items-center gap-2">
-            <div className="flex items-center border border-gray-300 rounded-3xl overflow-hidden w-fit">
+            <div className="flex items-center justify-center border border-gray-300 rounded-3xl overflow-hidden w-32 lg:w-52 h-12">
                 <div
                     onClick={handleIncrease}
-                    className="text-main hover:bg-gray-100 px-2 py-1"
+                    className="text-main hover:bg-gray-100 rounded-full px-2 py-1"
                 >
                     <HiPlus size={18} />
                 </div>
@@ -27,11 +27,11 @@ const QuantityControl = ({ hasDelete }) => {
                     type="number"
                     value={quantity}
                     readOnly
-                    className="w-10 text-center text-sec outline-none text-xl border-x border-gray-300"
+                    className="w-16 lg:w-32 text-center text-sec outline-none text-xl border-x border-gray-300"
                 />
                 <div
                     onClick={handleDecrease}
-                    className="text-main hover:bg-gray-100 px-2 py-1"
+                    className="text-main hover:bg-gray-100 rounded-full px-2 py-1"
                 >
                     <HiMinus size={18} />
                 </div>

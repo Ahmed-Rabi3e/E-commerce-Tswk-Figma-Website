@@ -24,7 +24,7 @@ const Cart = ({ color }) => {
                 <SheetDescription>
                 </SheetDescription>
                 {/* Cart Content */}
-                <SheetContent side="left">
+                <SheetContent side="left" className='w-96'>
                     {/* Header */}
                     <div className="flex justify-between items-center font-din">
                         <div className="flex gap-4 items-center">

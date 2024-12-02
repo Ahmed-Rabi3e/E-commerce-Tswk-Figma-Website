@@ -13,6 +13,7 @@ const Home = () => {
             <Categories />
             <Carousel head="أفضل المبيعات" />
             <Offers />
+            <Carousel head="الهواتف" />
         </div>
     )
 }

@@ -5,10 +5,8 @@ const CustomRadioButtons = ({ label, options, queryKey }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Extract the current query parameters
     const queryParams = new URLSearchParams(location.search);
 
-    // Get the initial value from the URL for this queryKey
     const initialValue = queryParams.get(queryKey) || "";
 
     const [selectedValue, setSelectedValue] = useState(initialValue);
@@ -16,7 +14,6 @@ const CustomRadioButtons = ({ label, options, queryKey }) => {
     const handleChange = (value) => {
         setSelectedValue(value);
 
-        // Update only the relevant query parameter
         if (value) {
             queryParams.set(queryKey, value); // Update the specific key
         } else {
@@ -28,7 +25,7 @@ const CustomRadioButtons = ({ label, options, queryKey }) => {
     };
 
     return (
-        <div className="my-2">
+        <div className="my-2 mx-auto">
             <h1 className="mb-2 text-lg text-text_gray">{label}</h1>
             <div className="flex gap-2 flex-wrap">
                 {options.map((option, index) => (
@@ -45,7 +42,7 @@ const CustomRadioButtons = ({ label, options, queryKey }) => {
 
                         {/* Border */}
                         <div
-                            className={`w-28 h-10 flex items-center justify-center rounded-lg border-2 text-center ${selectedValue === option
+                            className={`w-32 h-10 flex items-center justify-center rounded-lg border-2 text-center ${selectedValue === option
                                     ? "border-main bg-main bg-opacity-10 text-main"
                                     : "border-gray-300 text-gray-500"
                                 }`}
