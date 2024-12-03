@@ -14,7 +14,10 @@ export default {
 			boxShadow: {
 				sm: "0px 4px 19.3px 0px #0000000D",
 				product: "0px 4px 26.8px 0px #0000000D",
+				custom_blue: '0px 4px 19.2px 0px #3074F066',
 				blue: "0px 4px 26.8px 0px #3074F066",
+				feture: "0px 4px 29px 0px #2123280F",
+				checkout: "0px 4px 19px 0px #0000000F"
 
 			},
 			borderRadius: {

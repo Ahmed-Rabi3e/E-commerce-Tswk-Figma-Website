@@ -105,7 +105,7 @@ const Carousel = ({ head, hasCount }) => {
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={20}
-                    slidesPerView={1}
+                    slidesPerView={2}
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper;
                         setIsBeginning(swiper.isBeginning);

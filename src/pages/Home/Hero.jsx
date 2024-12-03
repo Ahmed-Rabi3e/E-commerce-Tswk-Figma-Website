@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa";
 import HomeSlider from "@/components/shared/HomeSlider";
 const Hero = () => {
     return (
-        <section className="relative bg-third py-16 lg:py-28 overflow-hidden w-full h-[717px] flex rounded-lg">
+        <section className="relative bg-third py-16 lg:py-28 overflow-hidden w-full h-[717px] flex rounded-lg mt-4">
             {/* Circles */}
             <div
                 className="bg-transparent w-[635px] h-[680px] rounded-full border-[60px] border-[#EAEDFF] absolute -top-60 -left-40"

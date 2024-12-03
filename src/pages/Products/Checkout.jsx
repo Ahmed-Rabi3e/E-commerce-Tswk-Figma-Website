@@ -7,7 +7,6 @@ import { HiOutlineTicket } from "react-icons/hi2";
 import { IoCallOutline } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
 import CartItem from "@/components/shared/CartItems";
-import Features from "../Home/Feature";
 import { Link } from "react-router-dom";
 import ProductOption from "@/components/shared/ProductOptions";
 import {
@@ -16,6 +15,7 @@ import {
     credit_3,
     credit_4,
 } from "@/assets/index";
+import FeaturesCheckout from "@/components/shared/FeaturesCheckout";
 
 const Checkout = () => {
     const [inputValue, setInputValue] = useState("");
@@ -44,7 +44,7 @@ const Checkout = () => {
             price: "12000",
             originalPrice: "13000",
             img: credit_2,
-            isBestOffer: false, // Highlight as best offer
+            isBestOffer: false,
         },
         {
             id: 3,
@@ -71,7 +71,7 @@ const Checkout = () => {
                 {/* Customer and Payment Details */}
                 <div className="bg-white">
                     {/* Customer Details */}
-                    <div className="mb-6 shadow-md p-6 rounded-lg">
+                    <div className="mb-6 shadow-checkout p-4 lg:p-10 rounded-3xl">
                         <h2 className="text-2xl font-bold mb-2">يرجى إدخال بياناتك الشخصية</h2>
                         <p className="text-gray-500 mb-4">قم بادخال بياناتك الشخصيه والتأكد منها لاتمام الطلب.</p>
                         <InputWithIcon
@@ -104,8 +104,8 @@ const Checkout = () => {
                     </div>
 
                     {/* Payment Method */}
-                    <div className="shadow-md p-6 rounded-md">
-                        <h2 className="text-xl font-bold mb-4">طريقة الدفع</h2>
+                    <div className="shadow-checkout p-4 lg:p-10 rounded-3xl">
+                        <h2 className="text-xl font-bold mb-2">طريقة الدفع</h2>
                         <p className="text-gray-500 mb-4">قم باختيار طريقه الدفع المناسبة لك</p>
                         <ProductOption options={productOptions} price={false} />
 
@@ -113,7 +113,7 @@ const Checkout = () => {
                 </div>
 
                 {/* Order Summary */}
-                <div className="bg-white py-6 px-8 rounded-lg shadow-md">
+                <div className="bg-white p-4 lg:p-10 rounded-3xl shadow-checkout h-fit">
                     <h2 className="text-2xl font-bold mb-4">ملخص الطلب</h2>
                     <CartItem hasCount={true} />
 
@@ -148,7 +148,7 @@ const Checkout = () => {
                     </div>
 
                     {/* Summary Table */}
-                    <div className="mt-6 text-gray-700 text-lg flex flex-col gap-3">
+                    <div className="mt-6 text-gray-500 text-lg flex flex-col gap-3">
                         <div className="flex justify-between">
                             <span>السلع</span>
                             <span>6500ج</span>
@@ -161,16 +161,16 @@ const Checkout = () => {
                             <span>كوبون الخصم</span>
                             <span>00.00</span>
                         </div>
-                        <div className="flex justify-between font-bold text-lg">
+                        <div className="flex justify-between font-bold text-sec text-lg border-t border-gray-200 pt-2">
                             <span>إجمالي المبلغ</span>
                             <span>6500ج</span>
                         </div>
                     </div>
 
-                    <Link to='/checkout/paymentsuccess' className="w-full py-4 flex justify-center bg-main text-white rounded-3xl text-2xl mt-6">
+                    <Link to='/checkout/paymentsuccess' className="w-full py-4 flex justify-center bg-main shadow-custom-blue text-white rounded-3xl text-2xl mt-6">
                         تأكيد الطلب
                     </Link>
-                    <Features />
+                    <FeaturesCheckout />
                 </div>
             </main>
         </div>

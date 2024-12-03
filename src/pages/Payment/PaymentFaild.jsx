@@ -9,7 +9,7 @@ const PaymentFaild = () => {
                     src={faild}
                     alt="Payment Failed"
                     loading="lazy"
-                    className="w-32 sm:w-48 mx-auto mb-4"
+                    className="w-48 lg:w-[340px] h-48 lg:h-[320px] mx-auto mb-4"
                 />
                 <h1 className="text-xl sm:text-3xl md:text-3xl font-bold text-sec">
                     لم تتم عملية الدفع بنجاح!
@@ -20,7 +20,7 @@ const PaymentFaild = () => {
             </div>
 
             {/* Buttons Section */}
-            <div className="flex flex-col sm:flex-row gap-4 text-sm sm:text-base md:text-lg mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 font-din_bold text-sm sm:text-base md:text-lg mt-8">
                 <Link
                     to="/checkout"
                     className="w-full sm:w-auto text-center bg-main text-white px-6 py-3 rounded-3xl shadow hover:bg-main/50 transition">

@@ -1,15 +1,18 @@
-import { FaCartShopping } from "react-icons/fa6";
 import { HiStar } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import Cart from "./Cart";
 
 const ProductCard = ({ product }) => {
     return (
-        <Link
-            className="relative border rounded-lg p-4 flex flex-col cursor-pointer shadow-sm"
-            to={`/products/${product.id}`}
+        <div
+            className="relative border rounded-lg p-4 flex flex-col shadow-sm"
         >
-            <img src={product.image} loading="lazy" alt={product.name} className="w-60 h-44 object-contain mb-4 mx-auto" />
-            <h2 className="text-xl truncate">{product.name}</h2>
+            <Link
+                to={`/products/${product.id}`}
+            >
+                <img src={product.image} loading="lazy" alt={product.name} className="w-60 h-44 object-contain mb-4 mx-auto" />
+                <h2 className="text-xl truncate">{product.name}</h2>
+            </Link>
             <div className="text-red-500 flex items-center justify-between">
                 <div>
                     <span className="font-bold text-xl">{product.originalPrice}</span>
@@ -22,10 +25,11 @@ const ProductCard = ({ product }) => {
                     <HiStar className="fill-yellow-500" />
                 </div>
             </div>
-            <button className="absolute top-1/2 left-4 bg-main text-white p-2 rounded-md hover:bg-main/75 transition">
-                <FaCartShopping />
-            </button>
-        </Link>
+            <div className="absolute top-1/2 translate-y-4 px-1 pt-1 left-2 bg-main text-white rounded-md hover:bg-main/75 transition">
+                <Cart color={true} />
+            </div>
+        </div>
+
     );
 };
 

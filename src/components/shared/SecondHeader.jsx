@@ -5,7 +5,7 @@ import { TbPhoneCall } from "react-icons/tb";
 
 const SecondHeader = () => {
     return (
-        <header className="flex justify-between items-center p-6 shadow-md">
+        <header className="flex justify-between items-center p-6 border-b-2 border-third">
             <div>
                 <span className="flex items-center gap-2">
                     <IoShieldCheckmarkOutline className="text-main text-2xl" />

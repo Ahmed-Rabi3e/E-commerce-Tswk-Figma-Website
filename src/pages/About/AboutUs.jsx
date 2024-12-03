@@ -1,9 +1,7 @@
-import NavigationBar from "@/components/shared/NavigationBar";
 
 const About = () => {
     return (
         <div className="px-4 sm:px-8">
-            <NavigationBar />
             <div className="max-w-5xl mx-auto mt-4 py-10">
                 {/* Section: About */}
                 <section className="text-right mb-10">

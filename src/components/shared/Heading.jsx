@@ -7,7 +7,7 @@ const Heading = ({ label, hasCount, children }) => {
                 {/* Indicator Bar */}
                 <span className="w-1.5 h-8 border-none bg-main rounded-xl absolute right-0" />
 
-                <h1 className="pr-2 lg:pr-4 text-xl sm:text-[27px] font-bold text-sec self-start">
+                <h1 className="pr-3 lg:pr-4 text-xl sm:text-[27px] font-bold text-sec self-start">
                     {label}
                 </h1>
 

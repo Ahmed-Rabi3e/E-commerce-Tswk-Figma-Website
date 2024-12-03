@@ -24,7 +24,7 @@ const FAQDetails = ({ label, Icon, description, isLast, open = false }) => {
                     onClick={toggleDetails}
                     className="text-lg cursor-pointer leading-6 flex items-center justify-between text-slate-900 font-semibold select-none w-full text-right"
                 >
-                    <span className="flex items-center">
+                    <span className="flex items-center text-sm lg:text-lg">
                         <span className="mx-2"><Icon size={20} /></span>{label}
                     </span>
                     {isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}

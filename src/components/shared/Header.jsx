@@ -17,7 +17,7 @@ const Header = () => {
     ];
 
     return (
-        <header className="bg-white shadow-sm w-full z-10">
+        <header className="bg-white border-b-2 border-third w-full z-10">
             <nav className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
                 <div className="flex items-center gap-2">
                     {/* Mobile Menu Button */}

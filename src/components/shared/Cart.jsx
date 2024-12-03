@@ -42,23 +42,23 @@ const Cart = ({ color }) => {
 
                     {/* Cart Items */}
                     <div className="mt-4">
-                        <CartItem hasDelete={true} hasCount={true} />
+                        <CartItem hasDelete={true} hasCount={true} column={true} />
 
                         {/* Total Price & Actions */}
                         <div className="mt-4">
-                            <div className="flex flex-col sm:flex-row items-center sm:justify-between pt-4">
+                            <div className="flex flex-row justify-between pt-4">
                                 {/* Total Label */}
-                                <div className="text-base md:text-lg font-semibold text-gray-800">
-                                    إجمالي السلة:
+                                <div className="text-base font-din_bold text-sec">
+                                    إجمالي المبلغ:
                                 </div>
                                 {/* Total Price */}
-                                <div className="text-base md:text-lg font-bold text-gray-800">
+                                <div className="text-lg font-din_bold text-sec">
                                     6500ج
                                 </div>
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="flex justify-center text-sm gap-4 mt-4">
+                            <div className="flex justify-center text-sm gap-4 mt-4 font-din_bold">
                                 <button className="px-6 py-2 w-full text-white bg-main rounded-3xl hover:bg-main/80">
                                     إتمام الشراء
                                 </button>

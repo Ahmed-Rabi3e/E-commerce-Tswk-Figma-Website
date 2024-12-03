@@ -3,7 +3,16 @@ import { Link, useLocation, useParams } from "react-router-dom";
 const NavigationBar = ({ productName }) => {
     const location = useLocation();
     const { id } = useParams();
-    const pathnames = location.pathname.split("/").filter((x) => x);
+    const pathnames = location.pathname.split("/").filter((x) => {
+        return x;
+    });
+
+    if (location.pathname === "/") {
+        return null;
+    }
+    if (location.pathname === "/checkout/paymentsuccess") {
+        return null;
+    }
 
     const breadcrumbItems = [
         { name: "الصفحة الرئيسية", path: "/" },
@@ -22,7 +31,6 @@ const NavigationBar = ({ productName }) => {
                     name = "معلومات عنا";
                     break;
                 default:
-                    // If the segment is dynamic (e.g., a product), use the first 3 words of productName or fallback to the ID
                     if (path.includes("/product") && index > 0) {
                         if (productName) {
                             name = productName.split(" ").slice(0, 3).join(" "); // Get the first 3 words
@@ -38,7 +46,7 @@ const NavigationBar = ({ productName }) => {
     ];
 
     return (
-        <nav className="bg-gray-100 py-2 pr-14 w-full">
+        <nav className="bg-gray-100 py-3 pr-4 lg:pr-16 w-full">
             <ol className="flex items-center text-sm text-sec">
                 {breadcrumbItems.map((item, index) => {
                     const isLast = index === breadcrumbItems.length - 1;

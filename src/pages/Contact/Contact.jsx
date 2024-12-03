@@ -1,10 +1,6 @@
-import NavigationBar from "@/components/shared/NavigationBar";
-
 const Contact = () => {
     return (
         <div className="px-4 sm:px-8">
-            <NavigationBar />
-
             <div className="max-w-4xl mx-auto mt-4 py-10 ">
                 {/* Section Title */}
                 <section className="text-right">

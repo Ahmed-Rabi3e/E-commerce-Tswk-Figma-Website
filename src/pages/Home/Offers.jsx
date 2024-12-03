@@ -40,7 +40,7 @@ const Offers = () => {
             <div className="container mx-auto px-4">
                 <Heading label='عروض خاصة' />
 
-                <div className="flex overflow-x-auto gap-10 py-4 scrollbar-hide">
+                <div className="flex flex-wrap justify-center lg:justify-start gap-8 py-4 ">
                     {offers.map((offer) => (
                         <div
                             key={offer.id}

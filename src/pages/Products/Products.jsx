@@ -2,7 +2,6 @@ import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProductCard from "@/components/shared/ProductCard";
 import FilterSidebar from "@/pages/Products/FilterSidebar";
-import NavigationBar from "@/components/shared/NavigationBar";
 import { pro_1, category_3, product_1 } from "@/assets/index";
 import Pagination from "@/components/shared/Pagination";
 import { DrawerDemo } from "@/components/shared/Drawer";
@@ -59,7 +58,6 @@ const Products = () => {
 
     return (
         <>
-            <NavigationBar />
             <div className="flex flex-col sm:flex-row md:flex-row my-4">
                 <FilterSidebar setSearchParams={setSearchParams} mobile={true} />
                 <div className="flex flex-col flex-wrap w-full p-4">

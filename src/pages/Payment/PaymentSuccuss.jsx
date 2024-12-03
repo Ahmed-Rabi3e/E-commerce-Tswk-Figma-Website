@@ -4,19 +4,19 @@ import CartItem from "@/components/shared/CartItems";
 
 const PaymentSuccess = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-10">
+    <div className="flex flex-col items-center justify-center px-4 pb-8">
       {/* Illustration and Message */}
       <div className="text-center">
         <img
           src={succuss}
           alt="Order Success"
           loading="lazy"
-          className="w-48 mx-auto mb-2"
+          className="w-[340px] h-[295px] mx-auto mb-2"
         />
-        <h1 className="text-2xl sm:text-3xl font-bold text-sec">
+        <h1 className="text-3xl font-din_bold font-bold text-sec">
           شكراً لك!
         </h1>
-        <p className="text-lg sm:text-3xl my-2 font-semibold text-main">
+        <p className="text-3xl my-2 font-semibold text-main">
           لقد تم تأكيد طلبك بنجاح!
         </p>
         <p className="text-gray-500 text-lg mt-4">
@@ -25,9 +25,9 @@ const PaymentSuccess = () => {
       </div>
 
       {/* Order Summary */}
-      <div className="bg-white shadow-md rounded-lg w-[400px] lg:w-[660px] mt-6 p-6">
+      <div className="bg-white shadow-sm rounded-3xl w-[400px] lg:w-[660px] mt-6 p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">ملخص الطلب</h2>
-        <CartItem />
+        <CartItem hasNotinagation={true} />
         <div className="text-lg text-gray-500 space-y-1 mt-4 font-medium">
           <div className="flex justify-between">
             <p>الســـلع</p>
