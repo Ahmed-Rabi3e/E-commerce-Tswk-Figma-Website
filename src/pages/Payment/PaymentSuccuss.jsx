@@ -4,7 +4,7 @@ import CartItem from "@/components/shared/CartItems";
 
 const PaymentSuccess = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 pb-8">
+    <div className="flex flex-col items-center justify-center mx-auto px-4 pb-8">
       {/* Illustration and Message */}
       <div className="text-center">
         <img

@@ -6,7 +6,7 @@ import Offers from "./Offers"
 
 const Home = () => {
     return (
-        <div className="container overflow-hidden px-4 py-4">
+        <div className="container overflow-hidden mx-auto px-4 py-4">
             <Hero />
             <Features />
             <Carousel head="خصم لفترة محدودة" hasCount />

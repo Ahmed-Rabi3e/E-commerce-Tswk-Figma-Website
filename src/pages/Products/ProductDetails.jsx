@@ -88,8 +88,8 @@ const ProductDetails = () => {
 
     return (
         <>
-            {/* <NavigationBar productName={product.name} /> */}
-            <div className="mx-auto px-4 py-6">
+            <NavigationBar productName={product.name} />
+            <div className="container mx-auto px-4 py-6">
                 {/* Product Details */}
                 <div className="flex flex-col lg:flex-row gap-6">
                     {/* Image Slider Section */}

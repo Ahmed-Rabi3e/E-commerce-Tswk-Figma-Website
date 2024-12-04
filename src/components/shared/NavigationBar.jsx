@@ -7,13 +7,6 @@ const NavigationBar = ({ productName }) => {
         return x;
     });
 
-    if (location.pathname === "/") {
-        return null;
-    }
-    if (location.pathname === "/checkout/paymentsuccess") {
-        return null;
-    }
-
     const breadcrumbItems = [
         { name: "الصفحة الرئيسية", path: "/" },
         ...pathnames.map((segment, index) => {
@@ -46,7 +39,7 @@ const NavigationBar = ({ productName }) => {
     ];
 
     return (
-        <nav className="bg-gray-100 py-3 pr-4 lg:pr-16 w-full">
+        <nav className="bg-gray-100 py-3 pr-4 lg:pr-16 !w-full">
             <ol className="flex items-center text-sm text-sec">
                 {breadcrumbItems.map((item, index) => {
                     const isLast = index === breadcrumbItems.length - 1;

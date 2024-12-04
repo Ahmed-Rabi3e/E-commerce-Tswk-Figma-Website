@@ -39,7 +39,7 @@ const Features = () => {
                         >
                             <div
                                 className={`flex items-center gap-4 justify-center flex-wrap relative ${index !== features.length - 1
-                                        ? "after:absolute after:w-[1px] after:h-14 after:bg-gray-300 after:-left-10 lg:after:block sm:after:hidden"
+                                        ? "after:hidden md:after:absolute lg::after:absolute  after:w-[1px] after:h-14 after:bg-gray-300 after:-left-10 lg:after:block sm:after:hidden"
                                         : ""
                                     }`}
                             >

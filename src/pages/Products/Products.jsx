@@ -5,6 +5,7 @@ import FilterSidebar from "@/pages/Products/FilterSidebar";
 import { pro_1, category_3, product_1 } from "@/assets/index";
 import Pagination from "@/components/shared/Pagination";
 import { DrawerDemo } from "@/components/shared/Drawer";
+import NavigationBar from "@/components/shared/NavigationBar";
 
 const mockProducts = [
     {
@@ -58,7 +59,8 @@ const Products = () => {
 
     return (
         <>
-            <div className="flex flex-col sm:flex-row md:flex-row my-4">
+            <NavigationBar />
+            <div className="container mx-auto flex flex-col sm:flex-row md:flex-row my-4">
                 <FilterSidebar setSearchParams={setSearchParams} mobile={true} />
                 <div className="flex flex-col flex-wrap w-full p-4">
                     <div className="flex items-center justify-between mb-4">
